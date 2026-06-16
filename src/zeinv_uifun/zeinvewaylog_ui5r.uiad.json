@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Einvoice and eway bill status log",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "EInvoice & Eway Application Log"
+  },
+  "ui5AppDetails": {
+    "appId": "einvewaylog"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A39835FC017AA2917A9E0C514ED319E7D43874FC_TM",
+    "semanticObject": "einvewaylog",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A39835FC017AA2917A9E0C514ED319E7D43874FC_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "EInvoice & Eway Application Log"
+      }
+    }
+  ]
+}

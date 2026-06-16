@@ -1,0 +1,78 @@
+managed implementation in class ZBP_R_TBIRN_EINV unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBIRN_EINV alias ZrTbirnEinv
+persistent table ZTB_IRN_EINV
+extensible
+draft table ZTBIRN_EINV_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Invno;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Invno;
+
+//field ( features : instance ) long_text;
+  create;
+  update;
+  delete;
+  validation validate_long_text on save {create; update; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+
+
+  mapping for ZTB_IRN_EINV corresponding extensible
+  {
+    Invno = INVNO;
+    Ackno = ACKNO;
+    Ackdatetime = ACKDATETIME;
+    Irn = IRN;
+    Signedqrcode = SIGNEDQRCODE;
+    Qrcode = QRCODE;
+    Remarks = REMARKS;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    Status = STATUS;
+    Additionalfield1 = ADDITIONALFIELD1;
+    Additionalfield2 = ADDITIONALFIELD2;
+    Additionalfield3 = ADDITIONALFIELD3;
+    Additionalfield4 = ADDITIONALFIELD4;
+    Additionalfield5 = ADDITIONALFIELD5;
+    Additionalfield6 = ADDITIONALFIELD6;
+    Vehiclenumber = VEHICLENUMBER;
+    Vehicledate = VEHICLEDATE;
+    Vehicletype = VEHICLETYPE;
+    Ewaybillnumber = EWAYBILLNUMBER;
+    Ewaybilldate = EWAYBILLDATE;
+    Trasportmode = TRASPORTMODE;
+    Transportmode = TRANSPORTMODE;
+    Transportcode = TRANSPORTCODE;
+    Transportname = TRANSPORTNAME;
+    Transportid = TRANSPORTID;
+    Transportdocketnumber = TRANSPORTDOCKETNUMBER;
+    Transportdocketdate = TRANSPORTDOCKETDATE;
+    Ewaybillstatus = EWAYBILLSTATUS;
+    Distance = DISTANCE;
+    long_text = long_text;
+  }
+
+}

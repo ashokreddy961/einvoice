@@ -1,0 +1,53 @@
+managed implementation in class ZBP_R_TBEWAYATTACH unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBEWAYATTACH alias ZrTbewayattach
+persistent table ZTB_EWAYATTACH
+extensible
+draft table ZTBEWAYATTACH_D
+etag master Lastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+{
+  field ( mandatory : create )
+   Invno;
+
+  field ( readonly )
+   DocID,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat;
+
+  field ( numbering : managed )
+   DocID;
+
+  field ( readonly : update )
+   Invno;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_EWAYATTACH corresponding extensible
+  {
+    Invno = INVNO;
+    DocID = DOC_ID;
+    FileName = FILE_NAME;
+    MimeType = MIME_TYPE;
+    EwaybillAttachment = EWAYBILL_ATTACHMENT;
+    Createdby = CREATEDBY;
+    Createdat = CREATEDAT;
+    Lastchangedby = LASTCHANGEDBY;
+    Lastchangedat = LASTCHANGEDAT;
+  }
+
+}

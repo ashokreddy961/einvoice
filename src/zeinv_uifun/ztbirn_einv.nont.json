@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZTBIRN_EINV",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZTBIRN_EINV",
+  "sapObjectType": "ZTBIRN_EINV",
+  "rootNode": true
+}

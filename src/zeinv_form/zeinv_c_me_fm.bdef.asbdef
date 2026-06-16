@@ -1,0 +1,13 @@
+projection implementation in class zbpeinv_c_me_fm unique;
+strict ( 2 );
+
+define behavior for ZEINV_C_ME_FM alias Ewayenv
+{
+  use create;
+  use update;
+
+  use action cancel04;
+  use action Transdetails;
+  use action GenerateEway;
+  use action sync;
+}

@@ -1,0 +1,137 @@
+managed implementation in class zbp_einv_me_fm unique;
+strict ( 2 );
+
+define behavior for ZEINV_ME_FM alias Ewayenv
+persistent table ztb_uiheader
+lock master
+authorization master ( global )
+etag master LastChangedAt
+{
+  create ( authorization : global );
+  update;
+
+  field ( readonly ) BillingDocument;
+ field ( readonly ) long_text;
+
+//validation validate_long_text on save { create; update; }
+determination truncate_long_text on save { create; update; }
+// action PrintPDF result [1] ZABS_PDF_RESULT;
+
+// action PrintPDF result [1]
+//   {
+//      filecontent : abap.rawstring;
+//      filename    : abap.string;
+//      mimetype    : abap.string;
+//  };
+
+
+action ( features : instance ) LongText
+  parameter ZLONGTEXT_POP
+  result [1] $self;
+
+action ( features : instance ) cancel04 result [1] $self;
+
+  action ( features : instance ) Transdetails
+    parameter ZEWAY_POP
+    result [1] $self;
+
+  action ( features : instance ) GenerateEway result [1] $self;
+
+ //action sync result [1] $self;
+// action ( features : instance ) sync result [1] $self;
+static action sync;
+  mapping for ztb_uiheader
+  {
+    BillingDocument = billing_document;
+    Plant           = plant;
+    Customer        = customer;
+    CustomerName    = customer_name;
+    InvoiceDate     = invoice_date;
+    Billingdocumenttype = billingdocumenttype;
+    CompanyCodeName  = company_code_name;
+    documentreferenceid = documentreferenceid;
+    PoDate = po_date;
+    PoNumber = po_number;
+    LastChangedAt = last_changed_at;
+
+
+
+  }
+
+}
+
+
+
+
+
+
+//
+//managed implementation in class zbp_einv_me_fm unique;
+//strict ( 2 );
+//
+//define behavior for ZEINV_ME_FM alias Ewayenv
+//persistent table ztb_uiheader
+//lock master
+//authorization master ( global )
+//etag master LastChangedAt
+//{
+//  create ( authorization : global );
+//  update;
+//  delete;
+//
+//  field ( readonly ) BillingDocument;
+//
+//  action ( features : instance ) cancel04 result [1] $self;
+//
+//  action ( features : instance ) Transdetails
+//    parameter ZEWAY_POP
+//    result [1] $self;
+//
+//  action ( features : instance ) GenerateEway result [1] $self;
+//
+//  association _Attachment { create; }
+//
+//  mapping for ztb_uiheader
+//  {
+//    BillingDocument = billing_document;
+//    Plant           = plant;
+//    Customer        = customer;
+//    CustomerName    = customer_name;
+//    InvoiceDate     = invoice_date;
+//    Billingdocumenttype = billingdocumenttype;
+//    CompanyCodeName  = company_code_name;
+//    documentreferenceid = documentreferenceid;
+//    PoDate = po_date;
+//    PoNumber = po_number;
+//    LastChangedAt = last_changed_at;
+//  }
+//}
+//
+///* Child Behavior */
+//
+//define behavior for ZI_DOC_ATTACHMENT alias Attachment
+//persistent table ztb_doc_attach
+//lock dependent by _Header
+//authorization dependent by _Header
+//{
+//
+//  update;
+//  delete;
+//  field ( readonly ) DocId;
+//  field ( readonly ) InvNo;
+//  field ( mandatory ) FileData, FileName, MimeType;
+//
+//  association _Header;
+//
+//  mapping for ztb_doc_attach
+//  {
+//    DocId     = doc_id;
+//    InvNo     = invno;
+//    DocType   = doc_type;
+//    FileName  = file_name;
+//    MimeType  = mime_type;
+//    FileData  = file_data;
+//    CreatedBy = created_by;
+//    CreatedAt = created_at;
+//  }
+//}

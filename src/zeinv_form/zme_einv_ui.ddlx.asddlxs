@@ -1,0 +1,373 @@
+//@Metadata.layer: #LOCALIZATION
+//
+//@UI.headerInfo: {
+//  typeName: 'Invoice',
+//  typeNamePlural: 'Invoices',
+//  title: { type: #STANDARD, value: 'BillingDocument' },
+//  description: { type: #STANDARD, value: 'BillingDocument' }
+//}
+//
+//annotate entity ZEINV_ME_FM
+//with 
+//{
+//
+//  // ===== Toolbar Buttons =====
+//  @UI.identification: [
+//    { type: #FOR_ACTION, dataAction: 'sync', label: 'Sync', position: 1 },
+//    { type: #FOR_ACTION, dataAction: 'cancel04', label: 'Cancel Invoice', position: 2, invocationGrouping: #CHANGE_SET },
+//    { type: #FOR_ACTION, dataAction: 'Transdetails', label: 'TransportDetails', position: 3 },
+//    { type: #FOR_ACTION, dataAction: 'GenerateEway', label: 'GenerateEwayBill', position: 4 }
+//  ]
+//  @UI.lineItem: [
+//    {
+//      position: 10,
+//      label: 'Billing Document',
+//      type: #WITH_INTENT_BASED_NAVIGATION,
+//      semanticObject: 'BillingDocument',
+//      semanticObjectAction: 'manage',
+//      semanticObjectBinding: [{
+//          localElement: 'BillingDocument',
+//          element: 'BillingDocument'
+//      }]
+//    }
+//  ]
+//  @UI.selectionField: [{ position: 10 }]
+//  BillingDocument;
+//
+//
+//  // ===== Billing Date =====
+//  @UI.lineItem:       [{ position: 20, label: 'Billing Date' }]
+//  @UI.selectionField: [{ position: 20 }]
+//  InvoiceDate;
+//
+//
+//  // ===== Customer =====
+//  @UI.lineItem: [{ position: 30, label: 'Customer' }]
+//  @Consumption.valueHelpDefinition: [{
+//    entity: { name: 'I_Customer', element: 'Customer' }
+//  }]
+//  Customer;
+//
+//
+//  // ===== Print PDF =====
+//  @UI.lineItem: [
+//    { position: 40, label: 'Print PDF', type: #WITH_URL, url: 'formURL' }
+//  ]
+//  form;
+//
+//
+//  // ===== Billing Type =====
+//  @UI.lineItem: [ { position: 50 } ]
+//  @UI.selectionField: [ { position: 50 } ]
+//  @Consumption.valueHelpDefinition: [{
+//    entity: { name: 'ZVH_BILLTYP', element: 'BillingDocumentType' }
+//  }]
+//  BillingType;
+//
+//
+//  // ===== IRN Status =====
+//  @UI.lineItem: [ { position: 60 } ]
+//  @UI.selectionField: [ { position: 60 } ]
+//  @UI.textArrangement: #TEXT_ONLY
+//  cboStatus;
+//
+//
+//  // ===== Supply Type =====
+//  @UI.lineItem: [{ position: 70, label: 'Supply Type' }]
+//  @UI.selectionField: [{ position: 70 }]
+//  supplytype;
+//
+//
+//  // ===== Eway Status =====
+//  @UI.lineItem: [{ position: 80, label: 'Eway Status' }]
+//  @UI.textArrangement: #TEXT_LAST
+//  Ewaybillstatus;
+//
+//
+//  // ===== Notes Button (Row Level) =====
+//  @UI.lineItem: [
+//    {
+//      type: #FOR_ACTION,
+//      dataAction: 'LongText',
+//      iconUrl: 'sap-icon://notes',
+//      label: 'Notes',
+//      position: 90
+//    }
+//  ]
+//  NotesAction;
+//
+//
+//  // ===== Hide Technical Fields =====
+// // @UI.hidden: true
+// // NotesAction;
+//
+//  @UI.hidden: true
+//  long_text;
+//
+//
+//  // ===== Object Page Facet =====
+//  @UI.facet: [
+//    {
+//      id: 'EWAY',
+//      purpose: #STANDARD,
+//      type: #FIELDGROUP_REFERENCE,
+//      label: 'E-Way Details',
+//      targetQualifier: 'EWAY',
+//      position: 100
+//    }
+//  ]
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 10 }]
+//  Transportmode;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 20 }]
+//  Transportcode;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 30 }]
+//  Transportname;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 40 }]
+//  TransportID;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 50 }]
+//  Transportdocketnumber;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 60 }]
+//  Transportdocketdate;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 70 }]
+//  Vehiclenumber;
+//
+//  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 80 }]
+//  Vehicletype;
+//
+//}
+//
+
+
+
+
+
+
+
+
+
+
+
+@Metadata.layer: #LOCALIZATION
+
+@UI.headerInfo: {
+  typeName: 'Invoice',
+  typeNamePlural: 'Invoices',
+  title: { type: #STANDARD, value: 'BillingDocument' },
+  description: { type: #STANDARD, value: 'BillingDocument' }
+}
+ 
+ 
+annotate entity 
+//ZEINV_C_ME_FM
+ZEINV_ME_FM
+with 
+{
+
+  @UI.lineItem: [
+  
+  { type: #FOR_ACTION, dataAction: 'sync', label: 'Sync', position: 4 },
+  {
+    position: 5,
+    type: #FOR_ACTION,
+    dataAction: 'cancel04',
+    label: 'Cancel Invoice',
+        invocationGrouping: #CHANGE_SET
+    
+    
+  },
+  {
+   position: 6,
+   type: #FOR_ACTION,
+   dataAction: 'Transdetails',
+   label: 'TransportDetails'
+},
+  {
+   position: 7,
+   type: #FOR_ACTION,
+   dataAction: 'GenerateEway',
+   label: 'GenerateEwayBill'
+},
+  { type: #FOR_ACTION, dataAction: 'LongText', label: 'Long Text', position: 8 },
+
+//  {
+//    position: 8,
+//    type: #FOR_ACTION,
+//    dataAction: 'PrintPDF',
+//    label: 'Print PDF'
+//  },
+
+ 
+    {
+      position: 10,
+      label: 'Billing Document',
+      type: #WITH_INTENT_BASED_NAVIGATION,
+      semanticObject: 'BillingDocument',
+      semanticObjectAction: 'manage',
+      semanticObjectBinding: [{
+          localElement: 'BillingDocument',
+          element: 'BillingDocument'
+      }]
+    }
+  ]
+  @UI.identification: [{ position: 10, label: 'Billing Document' }]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Billing Document'
+  
+  BillingDocument;
+  
+  @UI.identification: [{ position: 20, label: 'Document Reference ID' }]
+  @UI.lineItem:       [{ position: 20, label: 'Document Reference ID' }]
+  @UI.selectionField: [{ position: 20 }] 
+documentreferenceid;
+
+  @UI.identification: [{ position: 25, label: 'Billing Date' }]
+  @UI.lineItem:       [{ position: 25, label: 'Billing Date' }]
+  @UI.selectionField: [{ position: 25 }]
+  InvoiceDate;
+
+
+//  @UI.identification: [{ position: 30, label: 'Customer' }]
+//  @UI.lineItem:       [{ position: 30, label: 'Customer' }]
+  @UI.identification: [{ position: 30, label: 'Customer' }]
+  @UI.lineItem:       [{ position: 30, label: 'Customer' }]
+//  @UI.selectionField: [{ position: 30 }]
+@Consumption.valueHelpDefinition: [{
+  entity: {
+    name: 'I_Customer',
+    element: 'Customer'
+  }
+}]
+ 
+  Customer;
+  
+  
+  
+
+
+  @UI.lineItem: [
+      { position: 50, label: 'Print PDF', type: #WITH_URL, url: 'formURL' }
+  ]
+
+//  @UI.lineItem: [
+//  {
+//    type: #FOR_ACTION,
+//    dataAction: 'PrintPDF',
+//    label: 'Print PDF',
+//    position: 50
+//  }
+//]
+  form;
+
+//
+//  @UI.lineItem: [ { position: 60 } ]
+//  @UI.selectionField: [ { position: 60 } ]
+
+  @UI.lineItem: [ { position: 60 } ]
+@UI.selectionField: [ { position: 60 } ]
+ 
+@Consumption.valueHelpDefinition: [{
+  entity: {
+    name: 'ZVH_BILLTYP',
+    element: 'BillingDocumentType'
+  }
+}]
+  BillingType;
+  @UI.lineItem: [ { position: 55, label: 'IRN Status' } ]
+
+@UI.selectionField: [ { position: 55 } ]
+@UI.textArrangement: #TEXT_ONLY
+
+   @Consumption.valueHelpDefinition: [{
+      entity: { name: 'ZVHSTATUS', element: 'Status' }
+  }]
+  cboStatus;
+  
+    
+   @UI.identification: [{ position: 70, label: 'Supply Type' }]
+  @UI.lineItem:       [{ position: 70, label: 'Supply Type' }]
+  @UI.selectionField: [{ position: 70 }]
+  @Consumption.valueHelpDefinition: [{
+  entity: {
+    name: 'ZVH_SUPTYPE',
+    element: 'SupplyType'
+  }
+}]
+ 
+  supplytype;
+  
+//  @UI.identification: [{ position: 75, label: 'Ewaybillstatus'  }]
+//  
+//  @UI.lineItem:       [{ position: 75, label: 'Ewaybillstatus' }]
+
+@UI.lineItem: [{ position: 75, label: 'Eway Status' }]
+@UI.textArrangement: #TEXT_LAST
+@Consumption.valueHelpDefinition: [{
+  entity: { name: 'ZVH_EWAYSTATUS', element: 'Eway Status' }
+}]
+ 
+ Ewaybillstatus;
+ 
+ @UI.facet: [
+  {
+    id: 'EWAY',
+    purpose: #STANDARD,
+    type: #FIELDGROUP_REFERENCE,
+    label: 'E-Way Details',
+    targetQualifier: 'EWAY',
+    position: 80
+  }
+//  {
+//    id: 'ATTACHMENTS',
+//    purpose: #STANDARD,
+//    type: #LINEITEM_REFERENCE,
+//    label: 'Attachments',
+//    targetElement: '_Attachment',
+//    position: 90
+//  }
+]
+ 
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 10 }]
+  Transportmode;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 20 }]
+  Transportcode;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 30 }]
+  Transportname;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 40 }]
+  TransportID;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 50 }]
+  Transportdocketnumber;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 60 }]
+  Transportdocketdate;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 70 }]
+  Vehiclenumber;
+ 
+  @UI.fieldGroup: [{ qualifier: 'EWAY', position: 80 }]
+  Vehicletype;
+
+
+//@UI.lineItem: [
+//  {
+//    type: #FOR_ACTION,
+//    dataAction: 'LongText',
+//    label: 'Long Text',
+//    position: 90
+//  }
+//]
+
+ 
+
+}

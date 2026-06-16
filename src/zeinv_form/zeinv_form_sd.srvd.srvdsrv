@@ -1,0 +1,9 @@
+@EndUserText.label: 'for main form sd'
+@ObjectModel.leadingEntity.name: 'ZFM_MAIN'
+define service ZEINV_FORM_SD {
+  expose ZFM_MAIN;
+  expose ZFM_DETITEM;
+  expose ZR_TBIRN_EINV;
+  expose ZEINV_PLANT_ADD;
+  expose ZFM_ANNEXURE;
+}

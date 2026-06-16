@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBIRN_EINV'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBIRN_EINV'
+  }
+}
+define service ZUI_TBIRN_EINV_O4 provider contracts odata_v4_ui {
+  expose ZC_TBIRN_EINV;
+}

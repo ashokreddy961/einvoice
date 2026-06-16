@@ -1,0 +1,139 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Invno'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Invno'
+annotate view ZC_TBEWAYATTACH with
+{
+  @EndUserText.label: 'Invno'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Invno'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Invno'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Invno;
+  
+  @EndUserText.label: 'DocID'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'DocID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'DocID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  DocID;
+  
+  @EndUserText.label: 'FileName'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'FileName'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'FileName'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  FileName;
+  
+  @EndUserText.label: 'MimeType'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'MimeType'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'MimeType'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  MimeType;
+  
+  @EndUserText.label: 'EwaybillAttachment'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'EwaybillAttachment'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'EwaybillAttachment'
+  } ]
+  EwaybillAttachment;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  Lastchangedat;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  _BaseEntity;
+}

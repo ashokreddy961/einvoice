@@ -1,0 +1,5 @@
+@EndUserText.label: 'for metadata sd'
+define service ZEINV_ME_FM_SD {
+  expose ZEINV_ME_FM;
+  expose ZCE_FORM_EINV;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'sd custom entity form'
+define service ZCE_FORM_EINV_SD {
+  expose ZCE_FORM_EINV;
+}

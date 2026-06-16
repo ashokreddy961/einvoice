@@ -1,0 +1,463 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Invno'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Invno'
+annotate view ZC_TBIRN_EINV with
+{
+  @EndUserText.label: 'Invno'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Invno'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Invno'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Invno;
+  
+  @EndUserText.label: 'Ackno'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Ackno'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Ackno'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Ackno;
+  
+  @EndUserText.label: 'Ackdatetime'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Ackdatetime'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Ackdatetime'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Ackdatetime;
+  
+  @EndUserText.label: 'Irn'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Irn'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Irn'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Irn;
+  
+  @EndUserText.label: 'Signedqrcode'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Signedqrcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Signedqrcode'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Signedqrcode;
+  
+  @EndUserText.label: 'Qrcode'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Qrcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Qrcode'
+  } ]
+  Qrcode;
+  
+  @EndUserText.label: 'Remarks'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Remarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Remarks'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Remarks;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  Status;
+  
+  @EndUserText.label: 'Additionalfield1'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Additionalfield1'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Additionalfield1'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  Additionalfield1;
+  
+  @EndUserText.label: 'Additionalfield2'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Additionalfield2'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Additionalfield2'
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  Additionalfield2;
+  
+  @EndUserText.label: 'Additionalfield3'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Additionalfield3'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Additionalfield3'
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  Additionalfield3;
+  
+  @EndUserText.label: 'Additionalfield4'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Additionalfield4'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Additionalfield4'
+  } ]
+  @UI.selectionField: [ {
+    position: 170 
+  } ]
+  Additionalfield4;
+  
+  @EndUserText.label: 'Additionalfield5'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Additionalfield5'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Additionalfield5'
+  } ]
+  @UI.selectionField: [ {
+    position: 180 
+  } ]
+  Additionalfield5;
+  
+  @EndUserText.label: 'Additionalfield6'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Additionalfield6'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'Additionalfield6'
+  } ]
+  @UI.selectionField: [ {
+    position: 190 
+  } ]
+  Additionalfield6;
+  
+  @EndUserText.label: 'Vehiclenumber'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Vehiclenumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Vehiclenumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 200 
+  } ]
+  Vehiclenumber;
+  
+  @EndUserText.label: 'Vehicledate'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Vehicledate'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Vehicledate'
+  } ]
+  @UI.selectionField: [ {
+    position: 210 
+  } ]
+  Vehicledate;
+  
+  @UI.identification: [ {
+    position: 220 
+  } ]
+  @UI.lineItem: [ {
+    position: 220 
+  } ]
+  @UI.selectionField: [ {
+    position: 220 
+  } ]
+  Vehicletype;
+  
+  @EndUserText.label: 'Ewaybillnumber'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'Ewaybillnumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'Ewaybillnumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 230 
+  } ]
+  Ewaybillnumber;
+  
+  @EndUserText.label: 'Ewaybilldate'
+  @UI.identification: [ {
+    position: 240 , 
+    label: 'Ewaybilldate'
+  } ]
+  @UI.lineItem: [ {
+    position: 240 , 
+    label: 'Ewaybilldate'
+  } ]
+  @UI.selectionField: [ {
+    position: 240 
+  } ]
+  Ewaybilldate;
+  
+  @EndUserText.label: 'Trasportmode'
+  @UI.identification: [ {
+    position: 250 , 
+    label: 'Trasportmode'
+  } ]
+  @UI.lineItem: [ {
+    position: 250 , 
+    label: 'Trasportmode'
+  } ]
+  @UI.selectionField: [ {
+    position: 250 
+  } ]
+  Trasportmode;
+  
+  @UI.identification: [ {
+    position: 260 
+  } ]
+  @UI.lineItem: [ {
+    position: 260 
+  } ]
+  @UI.selectionField: [ {
+    position: 260 
+  } ]
+  Transportmode;
+  
+  @EndUserText.label: 'Transportcode'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Transportcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'Transportcode'
+  } ]
+  @UI.selectionField: [ {
+    position: 270 
+  } ]
+  Transportcode;
+  
+  @EndUserText.label: 'Transportname'
+  @UI.identification: [ {
+    position: 280 , 
+    label: 'Transportname'
+  } ]
+  @UI.lineItem: [ {
+    position: 280 , 
+    label: 'Transportname'
+  } ]
+  @UI.selectionField: [ {
+    position: 280 
+  } ]
+  Transportname;
+  
+  @EndUserText.label: 'Transportid'
+  @UI.identification: [ {
+    position: 290 , 
+    label: 'Transportid'
+  } ]
+  @UI.lineItem: [ {
+    position: 290 , 
+    label: 'Transportid'
+  } ]
+  @UI.selectionField: [ {
+    position: 290 
+  } ]
+  Transportid;
+  
+  @EndUserText.label: 'Transportdocketnumber'
+  @UI.identification: [ {
+    position: 300 , 
+    label: 'Transportdocketnumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 300 , 
+    label: 'Transportdocketnumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 300 
+  } ]
+  Transportdocketnumber;
+  
+  @EndUserText.label: 'Transportdocketdate'
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'Transportdocketdate'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 , 
+    label: 'Transportdocketdate'
+  } ]
+  @UI.selectionField: [ {
+    position: 310 
+  } ]
+  Transportdocketdate;
+  
+  @EndUserText.label: 'Ewaybillstatus'
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'Ewaybillstatus'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 , 
+    label: 'Ewaybillstatus'
+  } ]
+  @UI.selectionField: [ {
+    position: 320 
+  } ]
+  Ewaybillstatus;
+  
+  @EndUserText.label: 'Distance'
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'Distance'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 , 
+    label: 'Distance'
+  } ]
+  @UI.selectionField: [ {
+    position: 330 
+  } ]
+  Distance;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 340 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 340 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 340 
+  } ]
+  _BaseEntity;
+}

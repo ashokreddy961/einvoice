@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBIRN_EINV'
+@MappingRole: true
+define role ZC_TBIRN_EINV {
+  grant select on ZC_TBIRN_EINV
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBIRN_EINV REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBEWAYATTACH'
+@MappingRole: true
+define role ZR_TBEWAYATTACH {
+  grant select on ZR_TBEWAYATTACH
+  where TRUE;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Einvoice and Ewaybill RAP",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Generate EInvoice & EwayBill"
+  },
+  "ui5AppDetails": {
+    "appId": "generate_einvoice"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8A67E2E2CC65F7E5D55CE62C411CACBB3CC9F272_TM",
+    "semanticObject": "generateeinvoiceewaybill",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8A67E2E2CC65F7E5D55CE62C411CACBB3CC9F272_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Generate EInvoice & EwayBill"
+      }
+    }
+  ]
+}
